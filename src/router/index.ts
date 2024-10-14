@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProfileView from "@/views/ProfileView.vue";
+import TicketsView from "@/views/TicketsView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/profile',
     name: 'profile',
     component: ProfileView
+  },
+  {
+    path: '/tickets',
+    name: 'tickets',
+    component: TicketsView
   }
 ]
 

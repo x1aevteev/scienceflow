@@ -27,18 +27,20 @@ counter.increment()
   <header>
     <Container>
       <div class="header">
-        <Logo/>
+        <RouterLink to="/">
+          <Logo/>
+        </RouterLink>
         <ul class="header__list">
           <li>
             <SearchBar/>
           </li>
           <li>
-            <!--          с бэка данные о городе-->
+            <!--          TODO с бэка данные о городе-->
             <LocationIcon/>
             Калуга
           </li>
           <li>
-            <RouterLink to="/"><TicketsLogo/>
+            <RouterLink :to="{name: 'tickets'}"><TicketsLogo/>
               Мои билеты</RouterLink>
           </li>
           <li>
@@ -47,7 +49,7 @@ counter.increment()
             </RouterLink>
           </li>
           <li>
-            <RouterLink to="/">
+            <RouterLink :to="{name: 'profile'}">
               <ProfileIcon/>
             </RouterLink>
           </li>

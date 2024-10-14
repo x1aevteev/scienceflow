@@ -20,6 +20,10 @@ body {
   }
 }
 
+a{
+  text-decoration: none;
+}
+
 #app {
   display: flex;
   flex-direction: column;

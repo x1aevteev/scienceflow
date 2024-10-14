@@ -1,9 +1,12 @@
 <script setup lang="ts">
-
+import './styles.scss'
 </script>
 
 <template>
-<h2>это карточка</h2>
+<!--  TODO здесь пропсами будет получаться инфа для карточки, сейчас хард-код-->
+<div class="card">
+крутая карточка
+</div>
 </template>
 
 <style scoped lang="scss">

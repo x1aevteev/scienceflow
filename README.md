@@ -17,3 +17,5 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### В данный момент является хард-кодом, все данные, которые сейчас размещены в блоках, будут масштабируемыми через API
