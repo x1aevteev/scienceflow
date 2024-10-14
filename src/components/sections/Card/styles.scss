@@ -1,5 +1,22 @@
 .card{
-  background: #000;
-  height: 150px;
-  width: 150px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  width: 100%;
+  box-shadow: 1px 1px 3px #000;
+  overflow: hidden;
+
+  &__image{
+    width: 200px;
+    height: 100px;
+
+    background: #000;
+  }
+
+  &__btn{
+
+  }
 }

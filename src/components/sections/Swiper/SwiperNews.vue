@@ -48,7 +48,6 @@ let count = [
         @slideChange="onSlideChange"
     >
         <swiper-slide v-for="(item, i) in count" :key="i">
-          {{i}}
           <Card></Card>
         </swiper-slide>
     </Swiper>
