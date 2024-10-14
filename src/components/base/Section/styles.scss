@@ -1,0 +1,19 @@
+Section {
+  margin-bottom: 88px;
+  padding: 0 120px;
+  overflow: hidden;
+  @include sectionGrid;
+
+  @include maxWidth($max-1280) {
+    margin-bottom: 40px;
+    padding: 0 56px;
+  }
+
+  @include maxWidth($max-768) {
+    padding: 0 24px;
+  }
+
+  @include maxWidth($max-320) {
+    padding: 0 16px;
+  }
+}

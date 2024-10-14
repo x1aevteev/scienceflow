@@ -1,0 +1,30 @@
+@import './mixins.scss';
+
+/* Переменная. Шрифт. Размер */
+$font-size-12: var(--font-size-1);
+$font-size-13: var(--font-size-2);
+$font-size-14: var(--font-size-3);
+$font-size-16: var(--font-size-4);
+$font-size-17: var(--font-size-5);
+$font-size-18: var(--font-size-6);
+$font-size-20: var(--font-size-7);
+$font-size-24: var(--font-size-8);
+$font-size-28: var(--font-size-9);
+$font-size-32: var(--font-size-10);
+$font-size-40: var(--font-size-11);
+$font-size-56: var(--font-size-12);
+
+/* Переменная. Шрифт. Высота строки */
+$line-height-140: var(--line-height-1);
+$line-height-150: var(--line-height-2);
+
+/* Переменная. Breakpoints для медиа запросов */
+$max-1600: 1919px;
+$max-1440: 1599px;
+$max-1280: 1439px;
+$max-1024: 1279px;
+$max-768: 1023px;
+$max-576: 767px;
+$max-425: 575px;
+$max-375: 424px;
+$max-320: 374px;

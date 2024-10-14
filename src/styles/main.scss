@@ -1,0 +1,147 @@
+@import './base.scss';
+@import "./global.scss";
+@import './reset.scss';
+@import './fonts.scss';
+
+body {
+  background: var(--color-bg-primary);
+  min-height: 100dvh;
+  color: var(--color-text-dark-grey);
+  font-weight: 400;
+  font-size: $font-size-20;
+  line-height: $line-height-150;
+  font-family: var(--font-family), serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @include maxWidth($max-1280) {
+    font-size: $font-size-16;
+  }
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 1920px;
+  height: 100dvh;
+}
+
+h1.Homepage-title {
+  color: var(--color-text-link-active);
+  font-weight: 700;
+  font-size: $font-size-56;
+  line-height: $line-height-140;
+  text-align: center;
+
+  @include maxWidth($max-1024) {
+    font-size: $font-size-40;
+  }
+
+  @include maxWidth($max-768) {
+    font-size: $font-size-28;
+  }
+}
+
+h2.Homepage-title {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: $font-size-40;
+  line-height: $line-height-140;
+  @include fullWidthSection;
+
+  @include maxWidth($max-1280) {
+    margin-bottom: 16px;
+    font-size: $font-size-32;
+  }
+
+  @include maxWidth($max-768) {
+    font-size: $font-size-24;
+  }
+}
+
+h1 {
+  margin-bottom: 24px;
+  color: var(--color-text-dark-grey);
+  font-weight: 700;
+  font-size: $font-size-40;
+  line-height: $line-height-140;
+  @include fullWidthSection;
+
+  @include maxWidth($max-1280) {
+    margin-bottom: 16px;
+    font-size: $font-size-32;
+  }
+
+  @include maxWidth($max-768) {
+    font-size: $font-size-24;
+  }
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: $font-size-32;
+  line-height: $line-height-140;
+  @include fullWidthSection;
+
+  @include maxWidth($max-768) {
+    font-size: $font-size-20;
+  }
+}
+
+h3 {
+  font-weight: 700;
+  font-size: $font-size-24;
+  line-height: $line-height-140;
+
+  @include maxWidth($max-768) {
+    font-size: $font-size-20;
+  }
+}
+
+h3 a {
+  color: var(--color-text-dark-grey);
+}
+
+h4 {
+  font-weight: 700;
+  font-size: $font-size-18;
+  line-height: $line-height-140;
+}
+
+p{
+  color: var(--color-text-dark-grey);
+  unicode-bidi: isolate;
+  line-height: var(--line-height-2);
+  font-family: var(--font-family);
+
+  @include maxWidth($max-1280) {
+    font-size: var(--font-size-4);
+  }
+}
+
+span{
+  color: var(--color-text-dark-grey);
+  line-height: var(--line-height-1);
+}
+
+button,
+a,
+a span,
+svg,
+svg path {
+  transition: var(--transition-link-button);
+}
+
+textarea {
+  resize: block;
+}
+
+select,
+button,
+a {
+  cursor: pointer;
+}

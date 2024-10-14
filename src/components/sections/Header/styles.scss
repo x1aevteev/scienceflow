@@ -1,0 +1,13 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 20px;
+
+  &__list{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

@@ -1,0 +1,39 @@
+// Для всех медиа запросов.
+@mixin maxWidth($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+// Разбиение секции на столбцы. Можно применять внутри секции.
+@mixin sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+
+  @include maxWidth($max-1440) {
+    column-gap: 24px;
+  }
+
+  @include maxWidth($max-768) {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 16px;
+  }
+
+  @include maxWidth($max-320) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Занимает всю шиирну секции по столбцам.
+@mixin fullWidthSection {
+  grid-column: span 12;
+
+  @media (max-width: $max-768) {
+    grid-column: span 6;
+  }
+
+  @media (max-width: $max-320) {
+    grid-column: span 4;
+  }
+}

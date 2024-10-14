@@ -1,0 +1,10 @@
+input[type='text'] {
+  background: #5E5E5E3D;
+  border-radius: 15px;
+  border: 0;
+}
+
+input[type='text']::placeholder{
+  font-size: var(--font-size-1);
+  text-align: center;
+}
