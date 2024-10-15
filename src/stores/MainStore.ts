@@ -1,14 +1,26 @@
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', {
-    state: () => {
-        return { count: 0 }
-    },
+//Types
+import type {HeaderType} from "@/types/header";
+import axios from "axios";
+
+export const pageStore = defineStore('page', {
+    state: () => ({
+        header: {} as HeaderType['head']
+    }),
     // could also be defined as
     // state: () => ({ count: 0 })
     actions: {
-        increment() {
-            this.count++
-        },
+        async getHeader(){
+            try{
+                const response = await axios('http://localhost:3000/head')
+                console.log(response.data)
+
+                this.header = response.data.head
+            }
+            catch (e){
+                console.log(e)
+            }
+        }
     },
 })

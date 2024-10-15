@@ -40,6 +40,7 @@ let count = [
 <template>
 <div class="swiper_universal">
   <Container>
+    <h2>Новости</h2>
     <Swiper
         :slides-per-view="3"
         :space-between="20"

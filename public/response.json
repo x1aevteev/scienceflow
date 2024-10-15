@@ -1,0 +1,117 @@
+{
+  "head": [
+    {
+      "name": "header",
+      "sections": [
+        {
+          "block": "location",
+          "name": "",
+          "location": "Калуга",
+          "route": ""
+        },
+        {
+          "block": "tickets",
+          "name": "Мои билеты",
+          "route": "/tickets"
+        },
+        {
+          "block": "favourites",
+          "name": "☆",
+          "route": "/fav"
+        },
+        {
+          "block": "personal",
+          "name": "",
+          "route": "/personal"
+        }
+      ]
+    },
+    {
+      "name": "navigationBLock",
+      "sections": [
+        {
+          "block": "main",
+          "name": "Главная",
+          "route": "/",
+          "subsections": []
+        },
+        {
+          "block": "news",
+          "name": "Новости",
+          "route": "/news"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "name": "news",
+      "sections": [
+        {
+          "name": "Очень крутая новость",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur delectus ducimus iure magni maiores modi quos sapiente. Ad consectetur, earum eos error exercitationem harum laudantium libero minima neque, numquam perferendis, quaerat temporibus voluptatem. Aut excepturi, fugit molestiae quam ratione sapiente vitae! Eligendi ipsum, suscipit? Dignissimos doloribus illum ipsa laborum nemo!",
+          "img": "",
+          "author": "x1_aevteev",
+          "tags": [
+            {
+              "name": "физика",
+              "id": "physics"
+            },
+            {
+              "name": "космос",
+              "id": "space"
+            }
+          ]
+        },
+        {
+          "name": "Супер крутая новость",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur delectus ducimus iure magni maiores modi quos sapiente. Ad consectetur, earum eos error exercitationem harum laudantium libero minima neque, numquam perferendis, quaerat temporibus voluptatem. Aut excepturi, fugit molestiae quam ratione sapiente vitae! Eligendi ipsum, suscipit? Dignissimos doloribus illum ipsa laborum nemo!",
+          "img": "",
+          "author": "di.borisovaa",
+          "tags": [
+            {
+              "name": "физика",
+              "id": "physics"
+            },
+            {
+              "name": "космос",
+              "id": "space"
+            }
+          ]
+        },
+        {
+          "name": "Супер крутая новость",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur delectus ducimus iure magni maiores modi quos sapiente. Ad consectetur, earum eos error exercitationem harum laudantium libero minima neque, numquam perferendis, quaerat temporibus voluptatem. Aut excepturi, fugit molestiae quam ratione sapiente vitae! Eligendi ipsum, suscipit? Dignissimos doloribus illum ipsa laborum nemo!",
+          "img": "",
+          "author": "di.borisovaa",
+          "tags": [
+            {
+              "name": "физика",
+              "id": "physics"
+            },
+            {
+              "name": "космос",
+              "id": "space"
+            }
+          ]
+        },
+        {
+          "name": "Очень крутая новость",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur delectus ducimus iure magni maiores modi quos sapiente. Ad consectetur, earum eos error exercitationem harum laudantium libero minima neque, numquam perferendis, quaerat temporibus voluptatem. Aut excepturi, fugit molestiae quam ratione sapiente vitae! Eligendi ipsum, suscipit? Dignissimos doloribus illum ipsa laborum nemo!",
+          "img": "",
+          "author": "x1_aevteev",
+          "tags": [
+            {
+              "name": "физика",
+              "id": "physics"
+            },
+            {
+              "name": "космос",
+              "id": "space"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
