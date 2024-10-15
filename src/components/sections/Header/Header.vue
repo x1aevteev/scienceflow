@@ -16,7 +16,6 @@ import Container from "@/components/base/Container/Container.vue";
 const store = pageStore()
 
 store.getHeader()
-store.getBlockRoutes()
 
 </script>
 
@@ -31,23 +30,18 @@ store.getBlockRoutes()
           <li>
             <SearchBar/>
           </li>
-          <li>
-            <!--          TODO с бэка данные о городе-->
-            <LocationIcon/>
-            Калуга
-          </li>
-          <li>
-            <RouterLink :to="{name: 'tickets'}"><TicketsLogo/>
-              Мои билеты</RouterLink>
-          </li>
-          <li>
-            <RouterLink to="/">
-              <FavIcon/>
-            </RouterLink>
-          </li>
-          <li>
-            <RouterLink :to="{name: 'profile'}">
+          <li v-for="(item, i) in store.header.sections" :key="i">
+            <template v-if=" item.block === 'location' ">
+              <LocationIcon/>
+              {{item?.location}}
+            </template>
+            <template v-if="item.block === 'personal'">
+              <RouterLink :to="item.route">
               <ProfileIcon/>
+              </RouterLink>
+            </template>
+            <RouterLink :to="item.route">
+              {{item.name}}
             </RouterLink>
           </li>
         </ul>

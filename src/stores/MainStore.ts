@@ -7,7 +7,7 @@ import {NavigationBlockType} from "@/types/navigationBlock";
 
 export const pageStore = defineStore('page', {
     state: () => ({
-        header: {} as HeaderType['head'],
+        header: {} as HeaderType,
         navigationBLock: {} as NavigationBlockType['head']
     }),
     actions: {
@@ -15,8 +15,7 @@ export const pageStore = defineStore('page', {
             try{
                 const response = await axios('http://localhost:3000/head')
                 console.log(response.data)
-
-                this.header = response.data.head
+                this.header = response.data
             }
             catch (e){
                 console.log(e)
@@ -24,7 +23,7 @@ export const pageStore = defineStore('page', {
         },
         async getBlockRoutes() {
             try{
-                const response = await axios('http://localhost:3000/head')
+                const response = await axios('http://localhost:3000/navigation')
                 console.log(response.data)
 
                 this.header = response.data.navigationBLock

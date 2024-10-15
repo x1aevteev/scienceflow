@@ -1,5 +1,5 @@
 {
-  "head": [
+  "head":
     {
       "name": "header",
       "sections": [
@@ -26,6 +26,7 @@
         }
       ]
     },
+  "navigation":
     {
       "name": "navigationBLock",
       "sections": [
@@ -40,9 +41,8 @@
           "route": "/news"
         }
       ]
-    }
-  ],
-  "news": [
+    },
+  "news":
     {
       "name": "news",
       "sections": [
@@ -112,5 +112,4 @@
         }
       ]
     }
-  ]
 }

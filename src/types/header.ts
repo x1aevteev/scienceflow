@@ -5,11 +5,9 @@ export type blockSections = {
     route?:string
 }
 
-export type HeaderType = {
-    head:[
+export type HeaderType = [
         {
             name?: string,
-            sections?: blockSections[],
+            sections?: blockSections,
         }
-    ]
-}
+]
