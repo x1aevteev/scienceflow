@@ -32,8 +32,7 @@
         {
           "block": "main",
           "name": "Главная",
-          "route": "/",
-          "subsections": []
+          "route": "/"
         },
         {
           "block": "news",

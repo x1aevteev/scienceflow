@@ -16,6 +16,7 @@ import Container from "@/components/base/Container/Container.vue";
 const store = pageStore()
 
 store.getHeader()
+store.getBlockRoutes()
 
 </script>
 
