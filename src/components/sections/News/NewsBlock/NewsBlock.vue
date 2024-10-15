@@ -12,8 +12,7 @@ import Card from "@/components/sections/Card/Card.vue";
 <!--//TODO название и пропсы для карточек-->
   <div class="NewsBlock">
     <Container>
-      <Swiper>
-      </Swiper>
+      <Swiper/>
     </Container>
   </div>
 </template>

@@ -2,9 +2,12 @@ input[type='text'] {
   background: #5E5E5E3D;
   border-radius: 15px;
   border: 0;
+  width: 300px;
+  padding: 0px 10px 0px 10px;
 }
 
 input[type='text']::placeholder{
   font-size: var(--font-size-1);
   text-align: center;
+  padding: 0 10px 0px 10px;
 }

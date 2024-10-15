@@ -5,9 +5,7 @@ export type blockSections = {
     route?:string
 }
 
-export type HeaderType = [
-        {
-            name?: string,
-            sections?: blockSections,
-        }
-]
+export type HeaderType = {
+    name?: string,
+    sections?: blockSections,
+}

@@ -7,6 +7,7 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Card from "@/components/sections/Card/Card.vue";
+import {pageStore} from "@/stores/MainStore";
 
 const swiper = Swiper
 
@@ -20,6 +21,10 @@ const onSlideChange = () => {
 // const props = defineProps({
 //   item: {type: Number, required: true}
 // })
+
+const store = pageStore()
+
+store.getNews()
 
 let count = [
   {
@@ -48,8 +53,13 @@ let count = [
         :modules="[Pagination]"
         @slideChange="onSlideChange"
     >
-        <swiper-slide v-for="(item, i) in count" :key="i">
-          <Card></Card>
+        <swiper-slide v-for="(item, i) in store.news.sections" :key="i">
+          <Card
+            :name="item.name"
+            :subtitle="item.description"
+            :slug = "item.slug"
+            :img = "item.img"
+          ></Card>
         </swiper-slide>
     </Swiper>
   </Container>

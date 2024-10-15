@@ -5,10 +5,6 @@ export type NavigationBlockSections = {
 }
 
 export type NavigationBlockType = {
-    head:[
-        {
-            name?: string,
-            sections?: NavigationBlockSections[],
-        }
-    ]
+    name?: string,
+    sections?: NavigationBlockSections[],
 }

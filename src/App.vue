@@ -1,5 +1,12 @@
+<script setup lang="ts">
+import Header from "@/components/sections/Header/Header.vue";
+import Footer from "@/components/sections/Footer/Footer.vue";
+import NavigationBlock from "@/components/sections/NavigationBlock/NavigationBlock.vue";
+</script>
+
 <template>
   <Header/>
+  <NavigationBlock/>
   <router-view/>
   <Footer/>
 </template>
@@ -26,7 +33,3 @@ nav {
   }
 }
 </style>
-<script setup lang="ts">
-import Header from "@/components/sections/Header/Header.vue";
-import Footer from "@/components/sections/Footer/Footer.vue";
-</script>
