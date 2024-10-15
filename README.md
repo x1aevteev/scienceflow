@@ -19,3 +19,11 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### In the real time, not all code is dynamic, until backend is launched
+
+### The project stack (at now): 
+vue3 composition API 
+scss 
+typescript 
+pinia
+axios
+json-server
