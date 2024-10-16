@@ -12,3 +12,9 @@ import Card from "@/components/sections/Card/Card.vue";
 import NewsBlock from "@/components/sections/News/NewsBlock/NewsBlock.vue";
 
 </script>
+
+<style scoped lang="scss">
+.home{
+  margin-bottom: 30px;
+}
+</style>

@@ -4,19 +4,33 @@
   border-radius: 20px;
   justify-content: center;
   align-items: center;
-  max-width: 200px;
+  max-width: 290px;
+  gap: 10px;
   width: 100%;
-  box-shadow: 1px 1px 3px #000;
+  border: 1px solid #000;
   overflow: hidden;
+  padding: 0px 0px 20px 0px;
 
   &__image{
-    width: 200px;
     height: 100px;
-
+    width: 290px;
     background: #000;
   }
 
-  &__btn{
+  &__text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    max-width: 100%;
+    width: 100%;
+  }
 
+  &__btn{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
   }
 }

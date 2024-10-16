@@ -8,6 +8,12 @@ const props = defineProps({
   slug: String,
   img: String
 })
+
+const concatText = (text: any) => {
+  if (text.length > 20){
+    return text.slice(0, 20) + ('...')
+  }
+}
 </script>
 
 <template>
@@ -16,7 +22,7 @@ const props = defineProps({
   <div class="card__image">{{props.img}}</div>
   <div class="card__text">
     <div class="card__text-name">{{ props.name }}</div>
-    <div class="card__text-subtitle">{{props.subtitle}}</div>
+    <div class="card__text-subtitle">{{concatText(props.subtitle)}}</div>
   </div>
   <div class="card__btn">
     <Button>Подробнее</Button>

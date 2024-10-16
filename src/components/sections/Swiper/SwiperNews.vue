@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import Container from "@/components/base/Container/Container.vue";
 import { Pagination } from 'swiper/modules';
+import './styles.scss'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -26,20 +27,6 @@ const store = pageStore()
 
 store.getNews()
 
-let count = [
-  {
-    id: 1
-  },
-  {
-    id: 2
-  },
-  {
-    id: 3
-  },
-  {
-    id: 4
-  },
-]
 </script>
 
 <template>
