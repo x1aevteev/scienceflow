@@ -10,8 +10,8 @@ export const SWIPER_NEWS_BREAKPOINTS: Breakpoints = {
     slidesPerView: 2,
   },
   768: {
-    slidesPerView: 3,
-    spaceBetween: 24,
+    slidesPerView: 2,
+    spaceBetween: 50,
   },
 };
 

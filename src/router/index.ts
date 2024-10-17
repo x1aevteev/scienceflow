@@ -2,6 +2,8 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import ProfileView from "@/views/ProfileView.vue";
 import TicketsView from "@/views/TicketsView.vue";
+import NewsPageView from "@/views/NewsPageView.vue";
+import NewsItemView from "@/views/NewsItemView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,6 +28,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/tickets',
     name: 'tickets',
     component: TicketsView
+  },
+  {
+    path: '/news',
+    name: 'news',
+    component: NewsPageView
+  },
+  {
+    path: '/news/:slug',
+    name: 'news-item',
+    component: NewsItemView
   }
 ]
 

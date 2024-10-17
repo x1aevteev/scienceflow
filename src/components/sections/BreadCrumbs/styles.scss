@@ -1,0 +1,28 @@
+@import "@/styles/global.scss";
+
+.BreadCrumbs {
+  margin-bottom: 32px;
+
+  &__block {
+    @include fullWidthSection;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link,
+  &__text {
+    hyphens: auto;
+    text-wrap: balance;
+    color: var(--color-text-light-grey);
+    font-weight: 400;
+    font-size: $font-size-14;
+    line-height: $line-height-150;
+  }
+
+  &__text {
+    font-weight: 700;
+  }
+}

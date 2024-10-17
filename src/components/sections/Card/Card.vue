@@ -25,7 +25,7 @@ const concatText = (text: any) => {
     <div class="card__text-subtitle">{{concatText(props.subtitle)}}</div>
   </div>
   <div class="card__btn">
-    <Button>Подробнее</Button>
+    <RouterLink :to="`/news/${props.slug}`">Подробнее</RouterLink>
   </div>
 </div>
 </template>

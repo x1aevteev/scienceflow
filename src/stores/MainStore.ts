@@ -4,13 +4,14 @@ import { defineStore } from 'pinia'
 import type {HeaderType} from "@/types/header";
 import axios from "axios";
 import {NavigationBlockType} from "@/types/navigationBlock";
-import {NewsBlockType} from "@/types/news";
+import {NewsBlockType, NewsSections} from "@/types/news";
 
 export const pageStore = defineStore('page', {
     state: () => ({
         header: {} as HeaderType,
         navigationBLock: {} as NavigationBlockType,
-        news: {} as NewsBlockType
+        news: {} as NewsBlockType,
+        singleNews: {} as NewsSections,
     }),
     actions: {
         async getHeader(){
@@ -44,6 +45,21 @@ export const pageStore = defineStore('page', {
             catch (e){
                 console.log(e)
             }
-        }
+        },
+        async getSingleNewsPage(slug: string | undefined){
+            try{
+                console.log(slug)
+                const response = await axios('http://localhost:3000/news')
+
+                let filteredData = response.data.sections.filter((section: any) => section.slug === slug)
+
+                this.singleNews = filteredData
+
+                console.log(filteredData)
+            }
+            catch (e){
+                console.log(e)
+            }
+        },
     },
 })

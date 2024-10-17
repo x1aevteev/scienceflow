@@ -15,16 +15,33 @@ type BulletsSwiperProps = {
   breakpoints?: Breakpoints;
 };
 
+const breakpoints = {
+  320: {
+    slidesPerView: 1,
+  },
+  576: {
+    slidesPerView: 2,
+  },
+  768: {
+    slidesPerView: 2,
+    spaceBetween: 150,
+  },
+}
+
 const { type } = withDefaults(defineProps<BulletsSwiperProps>(), {
   type: '',
 });
+
+
 </script>
 
 <template>
   <Swiper
       :loop="false"
-      :breakpoints="breakpoints"
+      :slides-per-view="2"
+      :space-between="150"
       :grabCursor="true"
+      :breakpoints="breakpoints"
   >
     <slot></slot>
   </Swiper>

@@ -5,6 +5,7 @@ import Card from "@/components/sections/Card/Card.vue";
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { pageStore } from "@/stores/MainStore";
 import BaseSwiper from "@/components/sections/Swiper/BaseSwiper/BaseSwiper.vue";
+import NewsItemCard from "@/components/sections/News/NewsItemCard/NewsItemCard.vue";
 
 const store = pageStore()
 
@@ -17,14 +18,16 @@ store.getNews()
   <div class="NewsBlock">
     <Container>
       <BaseSwiper>
-        <template v-for="(item, i) in store.news.sections" :key="i">
+        <template v-for="(card, i) in store.news.sections" :key="i">
           <SwiperSlide>
-            <Card
-                :name="item.name"
-                :subtitle="item.description"
-                :slug = "item.slug"
-                :img = "item.img"
-            ></Card>
+            <RouterLink :to="`/news/${card.slug}`" type="newsLink">
+              <NewsItemCard
+                  :name="card.name"
+                  :subtitle="card.description"
+                  :slug = "card.slug"
+                  :img = "card.img"
+              />
+            </RouterLink>
           </SwiperSlide>
         </template>
       </BaseSwiper>
