@@ -1,4 +1,6 @@
-# scienceflow1
+# scienceflow
+
+The science event agregator.
 
 ## Project setup
 ```
