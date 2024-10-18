@@ -61,5 +61,14 @@ export const pageStore = defineStore('page', {
                 console.log(e)
             }
         },
+        async getEvents(){
+            try{
+                const response = await axios('http://localhost:3000/events')
+                console.log(response)
+            }
+            catch (e) {
+                console.log(e)
+            }
+        }
     },
 })

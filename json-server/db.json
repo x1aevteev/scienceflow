@@ -129,5 +129,27 @@
           ]
         }
       ]
-    }
+    },
+  "events":
+  {
+    "name": "events",
+    "sections": [
+      {
+        "name": "Очень крутое событие",
+        "img": "",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
+        "slug": "event1",
+        "tags": [
+          {
+            "name": "физика",
+            "id": "physics"
+          },
+          {
+            "name": "космос",
+            "id": "space"
+          }
+        ]
+      }
+    ]
+  }
 }
