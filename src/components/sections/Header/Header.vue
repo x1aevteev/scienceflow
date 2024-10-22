@@ -11,6 +11,7 @@ import TicketsLogo from "@/components/icons/TicketsLogo.vue";
 import FavIcon from "@/components/icons/FavIcon.vue";
 import ProfileIcon from "@/components/icons/ProfileIcon.vue";
 import Container from "@/components/base/Container/Container.vue";
+import NavigationBlock from "@/components/sections/NavigationBlock/NavigationBlock.vue";
 
 
 const store = pageStore()
@@ -47,6 +48,7 @@ store.getHeader()
         </ul>
       </div>
     </Container>
+    <NavigationBlock/>
   </header>
 </template>
 

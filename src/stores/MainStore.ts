@@ -5,6 +5,7 @@ import type {HeaderType} from "@/types/header";
 import axios from "axios";
 import {NavigationBlockType} from "@/types/navigationBlock";
 import {NewsBlockType, NewsSections} from "@/types/news";
+import {EventsBlockType, EventsSections} from "@/types/events";
 
 export const pageStore = defineStore('page', {
     state: () => ({
@@ -12,6 +13,8 @@ export const pageStore = defineStore('page', {
         navigationBLock: {} as NavigationBlockType,
         news: {} as NewsBlockType,
         singleNews: {} as NewsSections,
+        events: {} as EventsBlockType,
+        singleEvent: {} as EventsSections
     }),
     actions: {
         async getHeader(){
@@ -64,7 +67,18 @@ export const pageStore = defineStore('page', {
         async getEvents(){
             try{
                 const response = await axios('http://localhost:3000/events')
-                console.log(response)
+
+                this.events = response.data
+            }
+            catch (e) {
+                console.log(e)
+            }
+        },
+        async getFooter(){
+            try{
+                const response = await axios('http://localhost:3000/footer')
+
+                console.log(response.data)
             }
             catch (e) {
                 console.log(e)

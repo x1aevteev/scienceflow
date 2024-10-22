@@ -6,10 +6,14 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { pageStore } from "@/stores/MainStore";
 import BaseSwiper from "@/components/sections/Swiper/BaseSwiper/BaseSwiper.vue";
 import NewsItemCard from "@/components/sections/News/NewsItemCard/NewsItemCard.vue";
+import {onMounted} from "vue";
 
 const store = pageStore()
 
-store.getNews()
+
+onMounted(() => {
+  store.getNews()
+})
 
 </script>
 

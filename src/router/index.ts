@@ -4,6 +4,8 @@ import ProfileView from "@/views/ProfileView.vue";
 import TicketsView from "@/views/TicketsView.vue";
 import NewsPageView from "@/views/NewsPageView.vue";
 import NewsItemView from "@/views/NewsItemView.vue";
+import EventsView from "@/views/EventsView.vue";
+import EventsItemView from "@/views/EventsItemView.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -38,6 +40,16 @@ const routes: Array<RouteRecordRaw> = [
     path: '/news/:slug',
     name: 'news-item',
     component: NewsItemView
+  },
+  {
+    path: '/events',
+    name: 'events',
+    component: EventsView
+  },
+  {
+    path: '/events/:slug',
+    name: 'events-item',
+    component: EventsItemView
   }
 ]
 
