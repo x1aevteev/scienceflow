@@ -1,9 +1,9 @@
 {
-  "name": "scienceflow1",
+  "name": "scienceflow",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build"
   },
   "dependencies": {
@@ -13,7 +13,8 @@
     "pinia": "^2.2.4",
     "swiper": "^11.1.14",
     "vue": "^3.2.13",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.0.3",
+    "vuetify": "^3.7.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-router": "~5.0.0",
