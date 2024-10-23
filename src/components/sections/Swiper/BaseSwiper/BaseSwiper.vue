@@ -38,7 +38,7 @@ const { type } = withDefaults(defineProps<BulletsSwiperProps>(), {
 <template>
   <Swiper
       :loop="false"
-      :slides-per-view="2"
+      :slides-per-view="3"
       :space-between="150"
       :grabCursor="true"
       :breakpoints="breakpoints"

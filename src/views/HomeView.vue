@@ -5,6 +5,7 @@ import Footer from "@/components/sections/Footer/Footer.vue";
 import Card from "@/components/sections/Card/Card.vue";
 import NewsBlock from "@/components/sections/News/NewsBlock/NewsBlock.vue";
 import EventsBlock from "@/components/sections/Events/EventsBlock/EventsBlock.vue";
+import Banner from "@/components/sections/Banner/Banner.vue";
 
 </script>
 
@@ -13,6 +14,7 @@ import EventsBlock from "@/components/sections/Events/EventsBlock/EventsBlock.vu
   <nav class="home">
     <NewsBlock/>
     <EventsBlock/>
+    <Banner/>
   </nav>
 </template>
 

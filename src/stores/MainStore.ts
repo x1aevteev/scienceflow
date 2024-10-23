@@ -6,6 +6,7 @@ import axios from "axios";
 import {NavigationBlockType} from "@/types/navigationBlock";
 import {NewsBlockType, NewsSections} from "@/types/news";
 import {EventsBlockType, EventsSections} from "@/types/events";
+import {MainBanner} from "@/types/mainBanner";
 
 export const pageStore = defineStore('page', {
     state: () => ({
@@ -14,7 +15,8 @@ export const pageStore = defineStore('page', {
         news: {} as NewsBlockType,
         singleNews: {} as NewsSections,
         events: {} as EventsBlockType,
-        singleEvent: {} as EventsSections
+        singleEvent: {} as EventsSections,
+        mainBanner: {} as MainBanner,
     }),
     actions: {
         async getHeader(){
@@ -77,6 +79,18 @@ export const pageStore = defineStore('page', {
         async getFooter(){
             try{
                 const response = await axios('http://localhost:3000/footer')
+
+                console.log(response.data)
+            }
+            catch (e) {
+                console.log(e)
+            }
+        },
+        async getMainBanner(){
+            try{
+                const response = await axios('http://localhost:3000/banner')
+
+                this.mainBanner = response.data
 
                 console.log(response.data)
             }
