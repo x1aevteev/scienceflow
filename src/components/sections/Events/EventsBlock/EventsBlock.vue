@@ -1,32 +1,33 @@
 <script setup lang="ts">
 import {pageStore} from "@/stores/MainStore";
-import {onMounted} from "vue";
+import {onMounted, type PropType} from "vue";
 import {VCard, VCardActions, VBtn} from "vuetify/components";
 import Container from "@/components/base/Container/Container.vue";
+import Card from "@/components/base/Card/Card.vue";
 
 const store = pageStore()
 
-onMounted(() => {
-  store.getEvents()
+const props = defineProps({
+  data: {
+    type: Object as PropType<any>,
+    required: true,
+  },
 })
-
+console.log(props.data)
 </script>
 
 <template>
     <Container>
+      <h3 class="text-h6">{{props.data.title}}</h3>
       <VContainer>
         <VRow>
-          <template v-for="(event, i) in store.events.sections">
+          <template v-for="(event, i) in props.data.sections">
             <div class="event">
               <VCol>
                 <VSheet>
-                  <VCard title="Card title" subtitle="Subtitle" :text="event.name">
-                    <VCardActions>
-                      <RouterLink :to="`/events/${event.slug}`">
-                        <VBtn>Подробнее</VBtn>
-                      </RouterLink>
-                    </VCardActions>
-                  </VCard>
+                  <Card
+                  :data="props.data"
+                  />
                 </VSheet>
               </VCol>
             </div>

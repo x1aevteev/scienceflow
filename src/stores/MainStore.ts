@@ -32,7 +32,6 @@ export const pageStore = defineStore('page', {
         async getBlockRoutes() {
             try{
                 const response = await axios('http://localhost:3000/navigation')
-                console.log(response.data)
 
                 this.navigationBLock = response.data
             }
@@ -43,7 +42,6 @@ export const pageStore = defineStore('page', {
         async getNews() {
             try{
                 const response = await axios('http://localhost:3000/news')
-                console.log(response.data.sections)
 
                 this.news = response.data
             }
@@ -53,7 +51,6 @@ export const pageStore = defineStore('page', {
         },
         async getSingleNewsPage(slug: string | undefined){
             try{
-                console.log(slug)
                 const response = await axios('http://localhost:3000/news')
 
                 let filteredData = response.data.sections.filter((section: any) => section.slug === slug)

@@ -14,11 +14,8 @@ const store = pageStore()
       <ul class="NewsPage__list">
         <li class="NewsPage__item News__card" v-for="(card,i) in store.news.sections" :key="i">
           <RouterLink :to="`/news/${card.slug}`" type="newsLink">
-            <NewsItemCard
-                :name="card.name"
-                :subtitle="card.description"
-                :slug = "card.slug"
-                :img = "card.img"
+            <Card
+                :data="card"
             />
           </RouterLink>
         </li>
