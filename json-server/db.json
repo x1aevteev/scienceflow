@@ -63,6 +63,7 @@
           "img": "",
           "author": "x1_aevteev",
           "slug": "cool1",
+          "parent": "news",
           "tags": [
             {
               "name": "физика",
@@ -81,6 +82,7 @@
           "img": "",
           "slug": "cool2",
           "author": "di.borisovaa",
+          "parent": "news",
           "tags": [
             {
               "name": "физика",
@@ -99,6 +101,7 @@
           "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
           "slug": "cool3",
           "author": "di.borisovaa",
+          "parent": "news",
           "tags": [
             {
               "name": "физика",
@@ -117,6 +120,7 @@
           "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
           "slug": "cool4",
           "author": "x1_aevteev",
+          "parent": "news",
           "tags": [
             {
               "name": "физика",
@@ -133,12 +137,14 @@
   "events":
   {
     "name": "events",
+    "title": "События",
     "sections": [
       {
         "name": "Очень крутое событие",
         "img": "",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event1",
+        "parent": "events",
         "tags": [
           {
             "name": "физика",
@@ -153,6 +159,7 @@
       {
         "name": "Очень крутое событие",
         "img": "",
+        "parent": "events",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event2",
         "tags": [
@@ -169,6 +176,7 @@
       {
         "name": "Очень крутое событие",
         "img": "",
+        "parent": "events",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event3",
         "tags": [
@@ -185,6 +193,7 @@
       {
         "name": "Очень крутое событие",
         "img": "",
+        "parent": "events",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event4",
         "tags": [
@@ -201,8 +210,10 @@
       {
         "name": "Очень крутое событие",
         "img": "",
+        "parent": "events",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event5",
+        "parent": "events",
         "tags": [
           {
             "name": "физика",
@@ -217,8 +228,10 @@
       {
         "name": "Очень крутое событие",
         "img": "",
+        "parent": "events",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event6",
+        "parent": "events",
         "tags": [
           {
             "name": "физика",
@@ -233,8 +246,10 @@
       {
         "name": "Очень крутое событие",
         "img": "",
+        "parent": "events",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event7",
+        "parent": "events",
         "tags": [
           {
             "name": "физика",
@@ -249,6 +264,7 @@
       {
         "name": "Очень крутое событие",
         "img": "",
+        "parent": "events",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event8",
         "tags": [
@@ -265,6 +281,7 @@
       {
         "name": "Очень крутое событие",
         "img": "",
+        "parent": "events",
         "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda consequuntur ducimus ea earum explicabo, iste laudantium molestiae nulla praesentium repellat reprehenderit sapiente voluptatibus? In quod, recusandae. Atque autem corporis debitis, earum et maiores, necessitatibus, nihil non quo sed sunt temporibus vero voluptatem? Ab animi cupiditate deserunt dolore ducimus eaque enim eveniet, impedit laboriosam libero magnam maiores minima necessitatibus praesentium provident quibusdam quod velit! Asperiores ex hic obcaecati quisquam unde. Dicta dolorum et ipsam iusto maxime quis recusandae. Consequatur eligendi eos exercitationem fuga illum, nihil sapiente voluptas. Aut commodi deleniti iste iure laborum sunt voluptatum. Asperiores dolorum facere reprehenderit tempore.",
         "slug": "event9",
         "tags": [

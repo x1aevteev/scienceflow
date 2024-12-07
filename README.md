@@ -31,6 +31,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - vue3 composition API 
 - scss 
 - vuetify
+- tailwind
 - typescript 
 - pinia
 - axios
