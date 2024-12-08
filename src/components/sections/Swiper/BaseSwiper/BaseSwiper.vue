@@ -42,6 +42,9 @@ const { type } = withDefaults(defineProps<BulletsSwiperProps>(), {
       :space-between="150"
       :grabCursor="true"
       :breakpoints="breakpoints"
+      :pagination="{
+        dynamicBullets: true,
+      }"
   >
     <slot></slot>
   </Swiper>

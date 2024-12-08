@@ -1,4 +1,4 @@
-<script setup lang="ts">
+2<script setup lang="ts">
 
 //imports
 import Container from "@/components/base/Container/Container.vue";
@@ -12,9 +12,7 @@ const store = pageStore()
 
 <template>
 <Container>
-
 <!--  :thirdText="data.name"-->
-  <BreadCrumbs second-text="Новости" />
   <NewsItemPage/>
 </Container>
 </template>

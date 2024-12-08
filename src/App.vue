@@ -6,7 +6,7 @@ import NavigationBlock from "@/components/sections/NavigationBlock/NavigationBlo
 
 <template>
   <Header/>
-  <router-view/>
+  <router-view class="flex flex-col flex-1"/>
   <Footer/>
 </template>
 

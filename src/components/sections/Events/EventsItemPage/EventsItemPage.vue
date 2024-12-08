@@ -1,30 +1,32 @@
 <script setup lang="ts">
 import './styles.scss'
 import {pageStore} from "@/stores/MainStore";
+import {onMounted} from "vue";
+import {useRoute} from "vue-router";
+
+//TODO: fix props to get single page
+
+const route = useRoute()
+console.log(route.params.parent, route.params.slug)
 
 const props = defineProps({
-  name: String,
-  subtitle: String,
+  parent: String,
   slug: String,
-  img: String
+})
+
+onMounted(async()=>{
+  if (props.parent && props.slug) {
+    await store.getSinglePage(props.parent, props.slug)
+  } else {
+    console.error('Parent or slug is missing')
+  }
 })
 
 const store = pageStore()
 </script>
 
 <template>
-  <!--  TODO здесь пропсами будет получаться инфа для карточки, сейчас хард-код-->
-  <div class="events-card">
-    <div class="events-card__image">{{props.img}}</div>
-    <div class="events-card__text">
-      <div class="events-card__text-name">{{ props.name }}</div>
-    </div>
-    <div class="events-card__btn">
-      <RouterLink :to="`/news/${props.slug}`"
-                  @click="store.getSingleNewsPage(props.slug)"
-      >Подробнее</RouterLink>
-    </div>
-  </div>
+
 </template>
 
 <style scoped lang="scss">

@@ -39,12 +39,14 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/news/:slug',
     name: 'news-item',
-    component: NewsItemView
+    component: NewsItemView,
+    props: true,
   },
   {
     path: '/events',
     name: 'events',
-    component: EventsView
+    component: EventsView,
+    props: true,
   },
   {
     path: '/events/:slug',

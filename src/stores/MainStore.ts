@@ -13,7 +13,7 @@ export const pageStore = defineStore('page', {
         header: {} as HeaderType,
         navigationBLock: {} as NavigationBlockType,
         news: {} as NewsBlockType,
-        singleNews: {} as NewsSections,
+        singleItem: {} as NewsSections,
         events: {} as EventsBlockType,
         singleEvent: {} as EventsSections,
         mainBanner: {} as MainBanner,
@@ -72,13 +72,17 @@ export const pageStore = defineStore('page', {
                 console.log(e)
             }
         },
-        async getSingleNewsPage(slug: string | undefined){
+        async getSinglePage(parent: string | undefined, slug: string | undefined) {
             try{
-                const response = await axios('http://localhost:3000/news')
+                console.log('parent', parent)
+                console.log('slug', slug)
+                const response = await axios(`http://localhost:3000/${parent}/${slug}`)
 
-                let filteredData = response.data.sections.filter((section: any) => section.slug === slug)
+                //let filteredData = response.data.sections.filter((section: any) => section.slug === slug)
 
-                this.singleNews = filteredData
+                console.log(response.data)
+
+                this.singleItem = response.data
             }
             catch (e){
                 console.log(e)
