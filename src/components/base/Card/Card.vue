@@ -10,8 +10,6 @@ const props = defineProps({
   },
 })
 
-console.log(props.data)
-
 // const concatText = (text: any) => {
 //   if (text.length > 20){
 //     return text.slice(0, 20) + ('...')

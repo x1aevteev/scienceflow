@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 
 //Types
 import type {HeaderType} from "@/types/header";
-import axios from "axios";
+import axios, {all} from "axios";
 import {NavigationBlockType} from "@/types/navigationBlock";
 import {NewsBlockType, NewsSections} from "@/types/news";
 import {EventsBlockType, EventsSections} from "@/types/events";
@@ -17,12 +17,35 @@ export const pageStore = defineStore('page', {
         events: {} as EventsBlockType,
         singleEvent: {} as EventsSections,
         mainBanner: {} as MainBanner,
+        allBlocksInfo: [] as any,
+        allBlocks: {} as any
     }),
     actions: {
+        async getSlugs(): Promise<void> {
+            try{
+                const response = await axios('http://localhost:3000/allBlocks')
+                this.allBlocks = response.data
+            }
+            catch (error) {
+                console.error(error)
+            }
+        },
+        async getInfo(blocks: any): Promise<void> {
+            try{
+                console.log(blocks, "блоки")
+                for(let i = 0; i < blocks.length; i++){
+                    const response = await axios(`http://localhost:3000/${blocks[i].name}`)
+                    this.allBlocksInfo.push(response.data)
+                }
+                console.log(this.allBlocksInfo)
+            }
+            catch(error){
+                console.log(error);
+            }
+        },
         async getHeader(){
             try{
                 const response = await axios('http://localhost:3000/head')
-                console.log(response.data)
                 this.header = response.data
             }
             catch (e){
@@ -56,8 +79,6 @@ export const pageStore = defineStore('page', {
                 let filteredData = response.data.sections.filter((section: any) => section.slug === slug)
 
                 this.singleNews = filteredData
-
-                console.log(filteredData)
             }
             catch (e){
                 console.log(e)
@@ -76,8 +97,6 @@ export const pageStore = defineStore('page', {
         async getFooter(){
             try{
                 const response = await axios('http://localhost:3000/footer')
-
-                console.log(response.data)
             }
             catch (e) {
                 console.log(e)
@@ -88,8 +107,6 @@ export const pageStore = defineStore('page', {
                 const response = await axios('http://localhost:3000/banner')
 
                 this.mainBanner = response.data
-
-                console.log(response.data)
             }
             catch (e) {
                 console.log(e)

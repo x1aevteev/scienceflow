@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Swiper } from 'swiper/vue';
-import { Pagination } from 'swiper/modules';
+import  Pagination  from 'swiper';
 
 // Styles
 import 'swiper/css';

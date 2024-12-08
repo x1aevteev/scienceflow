@@ -1,20 +1,17 @@
 <script setup lang="ts">
 import {defineComponent, onMounted} from 'vue';
-import Header from "@/components/sections/Header/Header.vue";
-import Footer from "@/components/sections/Footer/Footer.vue";
-import Card from "@/components/sections/Card/Card.vue";
-import NewsBlock from "@/components/sections/News/NewsBlock/NewsBlock.vue";
-import EventsBlock from "@/components/sections/Events/EventsBlock/EventsBlock.vue";
 import Banner from "@/components/sections/Banner/Banner.vue";
 import {pageStore} from "@/stores/MainStore";
+import MainPageBlock from "@/components/base/MainPageBlock/MainPageBlock.vue";
 
 const store = pageStore()
 
-onMounted(()=>{
-  store.getNews()
-  store.getEvents()
-  store.getMainBanner()
-  console.log(store.news)
+onMounted(async ()=>{
+  if(!store.allBlocksInfo.length){
+    await store.getSlugs()
+    await store.getInfo(store.allBlocks)
+    console.log(store.allBlocksInfo)
+  }
 })
 
 </script>
@@ -22,15 +19,13 @@ onMounted(()=>{
 
 <template>
   <nav class="home flex flex-col gap-4">
-    <NewsBlock
-    :data="store.news"
-    />
-    <EventsBlock
-    :data="store.events"
-    />
-    <Banner
-    :store="store.mainBanner"
-    />
+    <template
+        v-for="(item,i) in store.allBlocksInfo"
+    >
+      <MainPageBlock
+      :data="item"
+      />
+    </template>
   </nav>
 </template>
 
