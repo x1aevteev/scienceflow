@@ -32,7 +32,6 @@ console.log(props.data)
     <Container>
       <BaseSwiper>
         <template v-for="(card, i) in props.data.sections" :key="i">
-          {{card}}
           <SwiperSlide>
             <RouterLink :to="`/news/${card.slug}`" type="newsLink">
               <Card

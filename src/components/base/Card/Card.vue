@@ -26,7 +26,7 @@ const store = pageStore()
   <div class="card">
     <div class="card__image">{{props.data.img}}</div>
     <div class="card__text">
-      <div class="card__text-name">{{ props.data.img }}</div>
+      <div class="card__text-name">{{ props.data.name }}</div>
       <div class="card__text-subtitle">{{props?.data?.subtitle}}</div>
     </div>
     <div class="card__btn">

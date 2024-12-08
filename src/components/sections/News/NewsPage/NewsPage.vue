@@ -3,6 +3,7 @@ import './styles.scss'
 import {pageStore} from "@/stores/MainStore";
 import Container from "@/components/base/Container/Container.vue";
 import NewsItemCard from "@/components/sections/News/NewsItemCard/NewsItemCard.vue";
+import Card from "@/components/base/Card/Card.vue";
 
 const store = pageStore()
 

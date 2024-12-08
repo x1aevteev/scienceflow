@@ -26,7 +26,7 @@ console.log(props.data)
               <VCol>
                 <VSheet>
                   <Card
-                  :data="props.data"
+                  :data="event"
                   />
                 </VSheet>
               </VCol>
