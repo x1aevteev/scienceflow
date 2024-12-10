@@ -37,7 +37,7 @@ const routes: Array<RouteRecordRaw> = [
     component: NewsPageView
   },
   {
-    path: '/news/:slug',
+    path: '/:parent/:slug',
     name: 'news-item',
     component: NewsItemView,
     props: true,
@@ -46,12 +46,12 @@ const routes: Array<RouteRecordRaw> = [
     path: '/events',
     name: 'events',
     component: EventsView,
-    props: true,
   },
   {
-    path: '/events/:slug',
+    path: '/:parent/:slug',
     name: 'events-item',
-    component: EventsItemView
+    component: EventsItemView,
+    props: true,
   }
 ]
 

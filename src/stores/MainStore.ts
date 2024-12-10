@@ -73,19 +73,35 @@ export const pageStore = defineStore('page', {
             }
         },
         async getSinglePage(parent: string | undefined, slug: string | undefined) {
-            try{
-                console.log('parent', parent)
-                console.log('slug', slug)
-                const response = await axios(`http://localhost:3000/${parent}/${slug}`)
+            try {
+                if (!parent || !slug) {
+                    throw new Error('Parent or slug is undefined');
+                }
 
-                //let filteredData = response.data.sections.filter((section: any) => section.slug === slug)
+                console.log('parent:', parent);
+                console.log('slug:', slug);
 
-                console.log(response.data)
+                // Запрос для получения родительского ресурса
+                const response = await axios.get(`http://localhost:3000/${parent}`);
 
-                this.singleItem = response.data
-            }
-            catch (e){
-                console.log(e)
+                console.log(response);
+
+                // Проверяем, если в данных есть `sections` и это массив
+                if (response.data.sections && Array.isArray(response.data.sections)) {
+                    // Ищем объект с совпадающим `slug`
+                    const item = response.data.sections.find((section: any) => section.slug === slug);
+
+                    if (item) {
+                        console.log('Found item:', item);
+                        this.singleItem = item; // Устанавливаем найденный объект в `singleItem`
+                    } else {
+                        console.error(`No item found with slug: ${slug}`);
+                    }
+                } else {
+                    console.error('No sections found in the response');
+                }
+            } catch (e) {
+                console.error('Error fetching single page:', e);
             }
         },
         async getEvents(){

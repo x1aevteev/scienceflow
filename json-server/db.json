@@ -1,4 +1,15 @@
 {
+  "allBlocks": [
+    {
+      "name": "news"
+    },
+    {
+      "name": "events"
+    },
+    {
+      "name": "banner"
+    }
+  ],
   "head":
     {
       "name": "header",
@@ -55,6 +66,9 @@
   "news":
     {
       "name": "news",
+      "title": "Новости",
+      "mainPageCondition": "swiper",
+      "singlePageCondition": "block",
       "sections": [
         {
           "name": "Очень крутая новость",
@@ -138,6 +152,8 @@
   {
     "name": "events",
     "title": "События",
+    "mainPageCondition": "block",
+    "singlePageCondition": "block",
     "sections": [
       {
         "name": "Очень крутое событие",
@@ -300,6 +316,7 @@
   "banner":
   {
     "name": "banner",
+    "mainPageCondition": "banner",
     "url": "https://assets.static-bahn.de/.imaging/focalpoint/560x280/dam/jcr:1170073b-b971-4517-9384-55b4891c2653/icon_ticket_bahncard.svg"
   },
   "footer":

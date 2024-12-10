@@ -6,27 +6,27 @@ import {useRoute} from "vue-router";
 
 //TODO: fix props to get single page
 
-const route = useRoute()
-console.log(route.params.parent, route.params.slug)
+const store = pageStore()
 
 const props = defineProps({
   parent: String,
   slug: String,
 })
 
+const route = useRoute()
+
 onMounted(async()=>{
-  if (props.parent && props.slug) {
-    await store.getSinglePage(props.parent, props.slug)
+  console.log('Route params:', route.params.parent, route.params.slug);
+  if (route.params.parent && route.params.slug) {
+    await store.getSinglePage(route.params.parent, route.params.slug)
   } else {
     console.error('Parent or slug is missing')
   }
 })
-
-const store = pageStore()
 </script>
 
 <template>
-
+{{store.singleItem}}
 </template>
 
 <style scoped lang="scss">

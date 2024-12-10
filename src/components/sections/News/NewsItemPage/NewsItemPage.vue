@@ -4,6 +4,7 @@ import {pageStore} from "@/stores/MainStore";
 import BreadCrumbs from "@/components/sections/BreadCrumbs/BreadCrumbs.vue";
 import {onMounted, PropType} from "vue";
 import Container from "@/components/base/Container/Container.vue";
+import {useRoute} from "vue-router";
 
 const store = pageStore()
 
@@ -12,10 +13,12 @@ const props = defineProps({
   slug: String,
 })
 
+const route = useRoute()
+
 onMounted(async()=>{
-  console.log(props.parent && props.slug)
-  if (props.parent && props.slug) {
-    await store.getSinglePage(props.parent, props.slug)
+  console.log('Route params:', route.params.parent, route.params.slug);
+  if (route.params.parent && route.params.slug) {
+    await store.getSinglePage(route.params.parent, route.params.slug)
   } else {
     console.error('Parent or slug is missing')
   }
@@ -26,8 +29,6 @@ onMounted(async()=>{
 <template>
   <Container>
     <BreadCrumbs second-text="Новости" />
-    {{props}}
-    {{$route.params}}
     {{store.singleItem}}
 <!--    <h3-->
 <!--        class="text-h4 font-bold text-start"-->
