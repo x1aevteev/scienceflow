@@ -72,22 +72,22 @@ let item = store.singleItem
         <BaseSwiper>
           <template v-for="i in 15" :key="i">
             <SwiperSlide>
-              <div class="bg-black w-full h-full rounded-xl"/>
+              <div class="bg-black w-full h-[180px] rounded-xl"/>
             </SwiperSlide>
           </template>
         </BaseSwiper>
       </div>
       <div class="content">
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid grid-cols-3 gap-10">
           <div class="col-span-2 text-left">
-            <p class="text-base">
+            <p class="text-lg">
               {{ item.content }}
             </p>
           </div>
-          <div class="bg-black w-full h-full rounded-lg"/>
-          <div class="bg-black w-full h-full rounded-lg"/>
+          <div class="bg-black w-full h-full rounded-xl"/>
+          <div class="bg-black w-full h-full rounded-xl"/>
           <div class="col-span-2 text-left">
-            <p class="text-base">
+            <p class="text-lg">
               {{ item.content }}
             </p>
           </div>
@@ -113,7 +113,4 @@ let item = store.singleItem
 </template>
 
 <style scoped lang="scss">
-.bg-black {
-  aspect-ratio: 1; /* Квадрат пропорционален */
-}
 </style>
