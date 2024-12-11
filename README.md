@@ -25,9 +25,10 @@ npx json-server ./json-server/db.json
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### In the real time, not all code is dynamic, until backend is launched
+### [Ссылка на дизайн проекта](https://www.figma.com/design/Yhe8IljNupUuiWHOEsmRoj/Science-Flow?node-id=0-1&t=dVRCkTcE1NukPuVd-1)
 
-### The project stack (at now): 
+
+### The project stack: 
 - vue3 composition API 
 - scss 
 - vuetify
