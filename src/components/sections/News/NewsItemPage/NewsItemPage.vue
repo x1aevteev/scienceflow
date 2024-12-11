@@ -28,15 +28,13 @@ onMounted(async()=>{
 
 <template>
   <Container>
-    <BreadCrumbs second-text="Новости" />
+    <BreadCrumbs second-text="Новости" :second-link="`/${store.singleItem.parent}`" :third-text="store.singleItem.name"/>
     {{store.singleItem}}
 <!--    <h3-->
 <!--        class="text-h4 font-bold text-start"-->
 <!--        v-if="props.data.title"-->
 <!--    >{{props.data.title}}</h3>-->
   </Container>
-
-{{store.singleNews}}
 </template>
 
 <style scoped lang="scss">

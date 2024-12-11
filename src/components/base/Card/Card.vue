@@ -27,6 +27,7 @@ const store = pageStore()
     </div>
     <div class="card__btn">
       <RouterLink :to="{ name: `${props.data.parent}-item`, params: { parent: props.data.parent, slug: props.data.slug } }"
+                  @click="console.log(props.data.parent, props.data.slug)"
       >
         <p>Подробнее</p>
       </RouterLink>

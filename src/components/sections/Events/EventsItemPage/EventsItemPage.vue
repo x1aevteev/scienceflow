@@ -3,8 +3,9 @@ import './styles.scss'
 import {pageStore} from "@/stores/MainStore";
 import {onMounted} from "vue";
 import {useRoute} from "vue-router";
+import BreadCrumbs from "@/components/sections/BreadCrumbs/BreadCrumbs.vue";
 
-//TODO: fix props to get single page
+//TODO: fix request to get single page
 
 const store = pageStore()
 
@@ -26,7 +27,10 @@ onMounted(async()=>{
 </script>
 
 <template>
-{{store.singleItem}}
+  <Container>
+    <BreadCrumbs second-text="События" :second-link="`/${store.singleItem.parent}`" :third-text="store.singleItem.name"/>
+    {{store.singleItem}}
+  </Container>
 </template>
 
 <style scoped lang="scss">

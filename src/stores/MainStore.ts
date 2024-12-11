@@ -25,6 +25,7 @@ export const pageStore = defineStore('page', {
             try{
                 const response = await axios('http://localhost:3000/allBlocks')
                 this.allBlocks = response.data
+                console.log(response.data)
             }
             catch (error) {
                 console.error(error)
@@ -32,7 +33,6 @@ export const pageStore = defineStore('page', {
         },
         async getInfo(blocks: any): Promise<void> {
             try{
-                console.log(blocks, "блоки")
                 for(let i = 0; i < blocks.length; i++){
                     const response = await axios(`http://localhost:3000/${blocks[i].name}`)
                     this.allBlocksInfo.push(response.data)
