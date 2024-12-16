@@ -32,7 +32,7 @@ console.log(props.data)
         </template>
       </div>
       <div class="pt-8">
-        <RouterLink :to="`/${props.data.name}`" type="newsLink">
+        <RouterLink :to="`/${props.data.name}`" type="newsLink" class="max-w-[300px] w-full rounded-xl border p-4 !border-black">
           Посмотреть больше
         </RouterLink>
       </div>

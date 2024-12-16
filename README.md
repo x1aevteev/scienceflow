@@ -1,6 +1,6 @@
 # scienceflow
 
-# The science event agregator.
+# The science event agregator
 
 ## Project setup
 ```
@@ -19,7 +19,7 @@ npm run build
 
 ### Compiles and starting json-server
 ```
-npx json-server ./json-server/db.json
+npx json-server --watch ./json-server/db.json --port 3000
 ```
 
 ### Customize configuration

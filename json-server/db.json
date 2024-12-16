@@ -8,6 +8,9 @@
     },
     {
       "name": "banner"
+    },
+    {
+      "name": "lections"
     }
   ],
   "head":
@@ -148,6 +151,115 @@
         }
       ]
     },
+  "lections": {
+    "name": "lections",
+    "title": "Лекции",
+    "mainPageCondition": "block",
+    "sections": [
+      {
+        "name": "Лекция",
+        "img": "",
+        "parent": "lections",
+        "description": "Описание очень крутой лекции",
+        "slug": "lc1",
+        "tags": [
+          {
+            "name": "физика",
+            "id": "physics"
+          },
+          {
+            "name": "космос",
+            "id": "space"
+          }
+        ]
+      },
+      {
+        "name": "Введение в астрономию",
+        "img": "",
+        "parent": "lections",
+        "description": "Основы астрономии и наблюдение за звездами",
+        "slug": "lc2",
+        "tags": [
+          {
+            "name": "астрономия",
+            "id": "astronomy"
+          },
+          {
+            "name": "космос",
+            "id": "space"
+          }
+        ]
+      },
+      {
+        "name": "Механика и кинематика",
+        "img": "",
+        "parent": "lections",
+        "description": "Изучаем основные законы движения объектов",
+        "slug": "lc3",
+        "tags": [
+          {
+            "name": "механика",
+            "id": "mechanics"
+          },
+          {
+            "name": "физика",
+            "id": "physics"
+          }
+        ]
+      },
+      {
+        "name": "Электродинамика",
+        "img": "",
+        "parent": "lections",
+        "description": "Изучаем электромагнитные волны и их свойства",
+        "slug": "lc4",
+        "tags": [
+          {
+            "name": "электродинамика",
+            "id": "electrodynamics"
+          },
+          {
+            "name": "физика",
+            "id": "physics"
+          }
+        ]
+      },
+      {
+        "name": "Теория относительности",
+        "img": "",
+        "parent": "lections",
+        "description": "Понимание теории Эйнштейна и ее приложений",
+        "slug": "lc5",
+        "tags": [
+          {
+            "name": "относительность",
+            "id": "relativity"
+          },
+          {
+            "name": "физика",
+            "id": "physics"
+          }
+        ]
+      },
+      {
+        "name": "Космология и Вселенная",
+        "img": "",
+        "parent": "lections",
+        "description": "Теории о происхождении и развитии Вселенной",
+        "slug": "lc6",
+        "tags": [
+          {
+            "name": "космология",
+            "id": "cosmology"
+          },
+          {
+            "name": "космос",
+            "id": "space"
+          }
+        ]
+      }
+    ]
+  },
   "events":
   {
     "name": "events",
@@ -351,5 +463,6 @@
         ]
       }
     ]
-  }
+  },
+  "users": "users.json"
 }
