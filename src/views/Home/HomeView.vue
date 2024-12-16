@@ -14,6 +14,7 @@ onMounted(async ()=>{
   }
 })
 
+console.log(store.allBlocksInfo)
 </script>
 
 

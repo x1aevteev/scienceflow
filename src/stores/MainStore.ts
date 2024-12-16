@@ -74,6 +74,7 @@ export const pageStore = defineStore('page', {
         },
         async getSinglePage(parent: string | undefined, slug: string | undefined) {
             try {
+
                 if (!parent || !slug) {
                     throw new Error('Parent or slug is undefined');
                 }

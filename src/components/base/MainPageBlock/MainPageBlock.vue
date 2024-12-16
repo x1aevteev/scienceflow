@@ -13,6 +13,8 @@ const props = defineProps({
     required: true,
   },
 })
+
+console.log(props.data)
 </script>
 
 <template>
@@ -22,14 +24,17 @@ const props = defineProps({
             class="text-h4 font-bold text-start"
             v-if="props.data.title"
         >{{props.data.title}}</h3>
-      <div class="grid grid-cols-3 w-full items-center gap-10">
-        <template v-for="(event, i) in props.data.sections">
-          <div class="event flex justify-center">
-            <Card
-                :data="event"
-            />
-          </div>
+      <div class="grid grid-cols-4 w-full content-center gap-10">
+        <template v-for="(event, i) in props.data.sections.slice(0,4)">
+          <Card
+              :data="event"
+          />
         </template>
+      </div>
+      <div class="pt-8">
+        <RouterLink :to="`/${props.data.name}`" type="newsLink">
+          Посмотреть больше
+        </RouterLink>
       </div>
     </template>
     <template v-if="props.data.mainPageCondition === 'swiper'">

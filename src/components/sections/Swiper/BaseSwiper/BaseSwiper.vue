@@ -46,6 +46,6 @@ const { type } = withDefaults(defineProps<BulletsSwiperProps>(), {
         dynamicBullets: true,
       }"
   >
-    <slot></slot>
+    <slot/>
   </Swiper>
 </template>
