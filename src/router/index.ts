@@ -57,6 +57,11 @@ const routes: Array<RouteRecordRaw> = [
     name: 'lections-item',
     component: LectionsItemView,
     props: true,
+  },
+  {
+    path: '/personal',
+    name: 'personal-item',
+    component: ProfileView
   }
 ]
 

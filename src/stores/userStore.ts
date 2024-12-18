@@ -7,6 +7,7 @@ import {ERROR_TYPE} from "@/constants/errors";
 export const userStore = defineStore('user',{
     state: () => ({
         isLoggedIn: false,
+        isAuthenticated: false,
         currentUser: null,
         user: {} as User,
         error: '' as string,
@@ -24,16 +25,17 @@ export const userStore = defineStore('user',{
                 this.error = ERROR_TYPE.user.registration
             }
         },
-        async login(data: loggedUser): Promise<void> {
+        async authentificate(data: loggedUser): Promise<void> {
             try{
-                const reponse = await axios.get(`http://localhost:3000/users?=email=${data.email}`)
-                const user = reponse.data
+                const response = await axios.get(`http://localhost:3000/users?=email=${data.email}`)
+                const user = response.data
                 if(user && user.password === data.password){
                     this.currentUser = user
                     this.isLoggedIn = true
+                    this.isAuthenticated = true
                 }
             } catch(e){
-                console.error(e);
+                console.error(e)
                 this.error = ERROR_TYPE.user.auth
             }
         },
@@ -48,7 +50,7 @@ export const userStore = defineStore('user',{
         },
         async deleteUser(id: string): Promise<void> {
            try{
-               const reponse = await axios.delete(`http://localhost:3000/users/${id}`)
+               const response = await axios.delete(`http://localhost:3000/users/${id}`)
                this.isLoggedIn = true
                this.currentUser = null
            } catch(e){
