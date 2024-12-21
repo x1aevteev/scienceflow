@@ -32,7 +32,9 @@ console.log(props.cardFormat)
     >
       {{props.data.img}}
     </div>
-    <div class="p-6">
+    <div class="p-6"
+    v-if="props.cardFormat === 'big'"
+    >
       <p
           class="text-left"
       >Автор - @{{store.singleItem.author}}</p>
