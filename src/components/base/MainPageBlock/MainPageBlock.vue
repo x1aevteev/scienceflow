@@ -28,6 +28,7 @@ console.log(props.data)
         <template v-for="(event, i) in props.data.sections.slice(0,4)">
           <Card
               :data="event"
+              :card-format="base"
           />
         </template>
       </div>
@@ -48,6 +49,7 @@ console.log(props.data)
               <RouterLink :to="`/${props.data.parent}/${card.slug}`" type="newsLink">
                 <Card
                     :data="card"
+                    :card-format="base"
                 />
               </RouterLink>
             </SwiperSlide>
